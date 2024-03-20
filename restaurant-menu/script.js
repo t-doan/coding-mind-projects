@@ -27,7 +27,7 @@ class Menu {
    display(){
     img.src = this.image;
     h2.textContent = this.name;
-    pFirst.textContent = this.price;
+    pFirst.textContent = `$${this.price}`;
     pLast.textContent = this.description;
    }
 }
@@ -36,11 +36,15 @@ class Menu {
 // create 5 Menu objects here...
 // const breakfast = new Menu(parameter, parameter, parameter, parameter);
 const breakfast = new Menu('./image/omelette.jpg',
-"omelette",
+"Omelette",
 '12.99',
 "Eggs, bacon, potatoes");
 
-const lunch = new Menu('')
+const lunch = new Menu('./image/burger-fries.jpg', "Burger with Fries", "13.99", "With a side of fries");
+const dinner = new Menu('./image/steak.jpg','Steak' ,'17.99', 'Comes With mashed potatoes and green beans' );
+const dessert = new Menu('./image/lava-cake.jpg', 'Chocolate Lava Cake', "7.99", 'Chocolate cake with hot chocolate inside');
+const drink = new Menu('./image/soda.jpg','Soda', '1.99', 'Glass of soda of your choice');
+
 // Listens for when the webpage loads
 window.addEventListener("load", () => {
   breakfast.display();
@@ -50,24 +54,21 @@ window.addEventListener("load", () => {
 // add code here...
 
 $breakfastBtn.addEventListener("click", function () {
-  console.log('Breakfast World!');
-
-
+  breakfast.display();
 });
 
 $drinkBtn.addEventListener("click", function () {
-  console.log('Drink World!');
-
+  drink.display();
 });
 
 $lunchBtn.addEventListener("click", function () {
-  console.log("Lunch World!");
+  lunch.display();
 });
 
 $dinnerBtn.addEventListener("click", function () {
-  console.log("Dinner World!");
+  dinner.display();
 });
 
 $dessertBtn.addEventListener("click", function () {
-  console.log("Dessert World!");
+  dessert.display();
 });
