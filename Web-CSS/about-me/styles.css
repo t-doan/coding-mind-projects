@@ -1,0 +1,33 @@
+body{
+  margin: auto;
+  max-width: 1280px;
+  background-color: lightblue;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  display: inline;
+  border: black 3px solid;
+  border-radius: 10px;
+  font-size: 50px;
+  padding:1rem;
+}
+
+img {
+  width: 400px;
+  height: 250px;
+  border: yellow 5px dotted;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3{
+  font-size:25px;
+}
+
+p{
+  font-size:20px;
+}
