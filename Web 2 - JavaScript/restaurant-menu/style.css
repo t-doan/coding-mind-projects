@@ -29,9 +29,8 @@ ul li:hover {
   background-color: bisque;
 }
 
-.selected{
+ul li:first-of-type {
   text-decoration: underline;
-  background-color: aquamarine;
 }
 
 #menu {

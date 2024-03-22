@@ -14,7 +14,14 @@ const $dinnerBtn = document.querySelector("#dinner");
 
 const $menu = document.querySelector("#menu");
 
+//
+//Select all items that is ul li
+// const $itemButtons = document.querySelectorAll('ul li');
+// let prevSelectedItem = null;
+
+
 // Menu Class
+
 class Menu {
   constructor(image,name,price,description){
     this.image = image;
@@ -24,7 +31,9 @@ class Menu {
   }
   // add a constructor here...
    // add a function here...
-   display(){
+
+    display(){
+
     img.src = this.image;
     h2.textContent = this.name;
     pFirst.textContent = `$${this.price}`;
@@ -39,7 +48,6 @@ const breakfast = new Menu('./image/omelette.jpg',
 "Omelette",
 '12.99',
 "Eggs, bacon, potatoes");
-
 const lunch = new Menu('./image/burger-fries.jpg', "Burger with Fries", "13.99", "With a side of fries");
 const dinner = new Menu('./image/steak.jpg','Steak' ,'17.99', 'Comes With mashed potatoes and green beans' );
 const dessert = new Menu('./image/lava-cake.jpg', 'Chocolate Lava Cake', "7.99", 'Chocolate cake with hot chocolate inside');
@@ -72,3 +80,42 @@ $dinnerBtn.addEventListener("click", function () {
 $dessertBtn.addEventListener("click", function () {
   dessert.display();
 });
+
+
+//
+// const handleItemClick = (item) => {
+//   return () => {
+//     if (prevSelectedItem) {
+//       prevSelectedItem.style.textDecoration = "none";
+//       prevSelectedItem.style.backgroundColor = "white";
+//     }
+//     item.style.textDecoration = "underline";
+//     item.style.backgroundColor = "aquamarine";
+//     prevSelectedItem = item;
+
+//     // Display the corresponding menu item
+//     switch (item.id) {
+//       case "breakfast":
+//         breakfast.display();
+//         break;
+//       case "lunch":
+//         lunch.display();
+//         break;
+//       case "dinner":
+//         dinner.display();
+//         break;
+//       case "dessert":
+//         dessert.display();
+//         break;
+//       case "drinks":
+//         drink.display();
+//         break;
+//       default:
+//         break;
+//     }
+//   };
+// };
+
+// $itemButtons.forEach((button) => {
+//   button.addEventListener("click", handleItemClick(button));
+// });
